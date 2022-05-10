@@ -1,0 +1,54 @@
+{
+    "name": "bilalthepunjabi/bitcoin",
+    "description": "An easy and secure way to accept bitcoin payments on any laravel projects.",
+    "keywords": [
+        "bilalthepunjabi",
+        "bitcoin"
+    ],
+    "homepage": "https://github.com/bilalthepunjabi/bitcoin",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bilal Punjabi",
+            "email": "bilalthepunjabi@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bilalthepunjabi\\Bitcoin\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bilalthepunjabi\\Bitcoin\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bilalthepunjabi\\Bitcoin\\BitcoinServiceProvider"
+            ],
+            "aliases": {
+                "Bitcoin": "Bilalthepunjabi\\Bitcoin\\BitcoinFacade"
+            }
+        }
+    }
+}
